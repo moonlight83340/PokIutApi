@@ -13,7 +13,8 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li> <a href="#about"> About </a> </li>
-          <li> <a href="#Pokedex"> Pokedex </a> </li>
+          <li> <a href="#example"> Exemple</a> </li>
+          <li> <a href="#pokedex"> Pokedex </a> </li>
         </ul>
       </div><!--/.navbar-collapse -->
     </div>
@@ -26,6 +27,27 @@
 <div class="container marketing">
     <div class="row">
         <div id="about"><h2>À propos</h2></div>
+        <hr>
+        <p>
+            Pokiut Api est la première API pokémon en français, 
+            cette API permet d'avoir des informations sur les pokemons renvoyé en JSON afin d'être utilisé par d'autre site web,
+            comme des pokedex en ligne ou bien des jeux en utilisant les stats et sprites des pokémons.<br/>
+            Elle est développé par moi même, étudiant en DUT Informatique à l'iut d'aix en provence.<br/>
+            Elle est aussi actuellement utilisé sur le <a href="#pokedex">pokedex</a> que j'ai crée pour un projet informatique.
+        </p>
+    </div>
+    <div class="row">
+        <div id="example"><h2>Exemple</h2></div>
+        <hr>
+    </div>
+    <div class="row">
+        <div id="pokedex">
+            <h2>
+                <!-- Pokedex icon by Icons8 -->
+                <img src="https://maxcdn.icons8.com/Color/PNG/48/Gaming/pokedex-48.png" title="Pokedex" width="48">
+                Pokedex
+            </h2>
+        </div>
         <hr>
     </div>
 </div>
