@@ -10,7 +10,7 @@
         <meta name = " description " content = "<?= htmlentities($description)?>">
         <link href="/Resources/Bootstrap/css/bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="icon" href="/Resources/Image/Favicon/favicon.ico" />
+        <link rel="icon" type="image/png" href="/Resources/Images/pokeball.png" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="/Resources/Bootstrap/js/bootstrap.js"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -20,7 +20,29 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>  
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                  <a class="navbar-brand" href="<?= \PoireauFramework\Helper\Url::base()?>">Pokiut Api</a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li> <a href="#about"> About </a> </li>
+                  <li> <a href="#Pokedex"> Pokedex </a> </li>
+                </ul>
+              </div><!--/.navbar-collapse -->
+            </div>
+        </nav>
         <?= $contents?>
+        <footer>
+            <p class="text-center"><a href="#">Haut de page </a> ©  Pokiut Api 2016</p>
+        </footer>
     </body>
 </html>
