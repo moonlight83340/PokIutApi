@@ -14,11 +14,6 @@
 namespace App\Controller;
 class Home extends \PoireauFramework\Arch\Controller{
     
-    /**
-     *
-     * @var \App\Model\Account\Account
-     */
-    //private $model;
     public function __construct(\PoireauFramework\PoireauFramework $app) {
         parent::__construct($app);
     }
