@@ -51,7 +51,6 @@ class Api extends \PoireauFramework\Arch\Controller{
             $obj->type = $this->model->getTypeById($id);
         else if(is_string($id))
             $obj->type = $this->model->getTypeByName($id);
-        //ToDo something
         echo json_encode($obj);
 
         $this->output->setDefaultView(false);
