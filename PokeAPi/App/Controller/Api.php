@@ -41,18 +41,19 @@ class Api extends \PoireauFramework\Arch\Controller{
         $this->output->setDefaultView(false);
     }
     
-    public function spellAction($name){
+    public function spellAction($id = 1){
         header('Cache-Control: no-cache, must-revalidate');
         header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
         header('Content-type: application/json');
-        if($name){
-            $this->model = $this->app->loader->load(\App\Model\Api_Spell::class);
-            $obj = new \stdClass;
-            if(is_numeric($id))
-                $obj->type = $this->model->getTypeById($id);
-            //ToDo something
-            echo json_encode($obj);
-        }   
+        $this->model = $this->app->loader->load(\App\Model\Api_Spell::class);
+        $obj = new \stdClass;
+        if(is_numeric($id))
+            $obj->type = $this->model->getTypeById($id);
+        else if(is_string($id))
+            $obj->type = $this->model->getTypeByName($id);
+        //ToDo something
+        echo json_encode($obj);
+
         $this->output->setDefaultView(false);
     }
     
