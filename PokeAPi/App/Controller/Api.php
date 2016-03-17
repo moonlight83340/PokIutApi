@@ -48,9 +48,9 @@ class Api extends \PoireauFramework\Arch\Controller{
         $this->model = $this->app->loader->load(\App\Model\Api_Spell::class);
         $obj = new \stdClass;
         if(is_numeric($id))
-            $obj->type = $this->model->getSpellById($id);
+            $obj->spell = $this->model->getSpellById($id);
         else if(is_string($id))
-            $obj->type = $this->model->getSpellByName($id);
+            $obj->spell = $this->model->getSpellByName($id);
         echo json_encode($obj);
 
         $this->output->setDefaultView(false);
@@ -63,9 +63,9 @@ class Api extends \PoireauFramework\Arch\Controller{
         $this->model = $this->app->loader->load(\App\Model\Api_Talent::class);
         $obj = new \stdClass;
         if(is_numeric($id))
-            $obj->type = $this->model->getTalentById($id);
+            $obj->talent = $this->model->getTalentById($id);
         else if(is_string($id))
-            $obj->type = $this->model->getTalentByName($id);
+            $obj->talent = $this->model->getTalentByName($id);
         echo json_encode($obj);
         $this->output->setDefaultView(false);
     }
@@ -78,9 +78,9 @@ class Api extends \PoireauFramework\Arch\Controller{
             $this->model = $this->app->loader->load(\App\Model\Api_Pokemon::class);
             $obj = new \stdClass;
             if(is_numeric($id))
-                $obj->type = $this->model->getPokemonById($id);
+                $obj->pokemon = $this->model->getPokemonById($id);
             else if(is_string($id))
-                $obj->type = $this->model->getPokemonByName($id);
+                $obj->pokemon = $this->model->getPokemonByName($id);
             echo json_encode($obj);
         }   
         $this->output->setDefaultView(false);
