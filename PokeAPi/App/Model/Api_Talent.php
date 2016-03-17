@@ -13,5 +13,22 @@
  */
 namespace App\Model;
 class Api_Talent extends \PoireauFramework\Arch\Model{ 
-    
+    public function getTypeById($id){
+        $query = $this->database->prepare('SELECT TALENT_NAME,TALENT_FIGHT_EFFECT,TALENT_FIELD_EFFECT FROM TALENT WHERE TALENT_ID = :id');
+        $query->bindValue('id', $id, \PDO::PARAM_INT);
+        $query->execute();
+        $data = $query->fetchAll();
+        if(!$data)
+            return null;
+        return $data;
+    }
+
+    public function getTypeByName($name){
+        $query = $this->database->prepare('SELECT TALENT_NAME,TALENT_FIGHT_EFFECT,TALENT_FIELD_EFFECT FROM TALENT WHERE TALENT_NAME = :name');
+        $query->bindValue('name', $name, \PDO::PARAM_STR);
+        $query->execute();
+        $data = $query->fetchAll();
+        if(!$data)
+            return null;
+      
 }
