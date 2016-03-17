@@ -13,7 +13,7 @@
  */
 namespace App\Model;
 class Api_Spell extends \PoireauFramework\Arch\Model{ 
-    public function getTypeById($id){
+    public function getSpellById($id){
         $query = $this->database->prepare('SELECT SPELL_NAME,SPELL_DESCRIPTION,SPELL_TYPE,SPELL_PP,SPELL_PUIS,SPELL_PREC,SPELL_CLASS,SPELL_CT_CS_DPPL,SPELL_CT_CS_HGSS,SPELL_CT_CS_NB,SPELL_CT_CS_N2B2 FROM SPELL WHERE SPELL_ID = :id');
         $query->bindValue('id', $id, \PDO::PARAM_INT);
         $query->execute();
@@ -22,7 +22,7 @@ class Api_Spell extends \PoireauFramework\Arch\Model{
             return null;
         return $data;
     }
-    public function getTypeByName($name){
+    public function getSpellByName($name){
         $query = $this->database->prepare('SELECT SPELL_NAME,SPELL_DESCRIPTION,SPELL_TYPE,SPELL_PP,SPELL_PUIS,SPELL_PREC,SPELL_CLASS,SPELL_CT_CS_DPPL,SPELL_CT_CS_HGSS,SPELL_CT_CS_NB,SPELL_CT_CS_N2B2 FROM SPELL WHERE SPELL_NAME = :name');
         $query->bindValue('name', $name, \PDO::PARAM_STR);
         $query->execute();
