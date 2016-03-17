@@ -48,6 +48,8 @@ class Api extends \PoireauFramework\Arch\Controller{
         if($name){
             $this->model = $this->app->loader->load(\App\Model\Api_Spell::class);
             $obj = new \stdClass;
+            if(is_numeric($id))
+                $obj->type = $this->model->getTypeById($id);
             //ToDo something
             echo json_encode($obj);
         }   
