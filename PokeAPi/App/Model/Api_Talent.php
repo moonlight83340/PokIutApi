@@ -31,4 +31,5 @@ class Api_Talent extends \PoireauFramework\Arch\Model{
         if(!$data)
             return null;
       
+    }
 }
